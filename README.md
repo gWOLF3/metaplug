@@ -1,6 +1,6 @@
 # metaplug
 
-<img src="./plug.png" alt="plug" style="width:210px"/>
+<img src="./plug.png" alt="plug" width="200"/>
 
 #### a pluggable operating system for metanet
 
