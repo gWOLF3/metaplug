@@ -37,7 +37,8 @@ minikube service metaplug-http --namespace metaplug
 ```
 Can also be done with:
 ```
-helm install metaplug --name metaplug-demo
+helm package metaplug --version 0.1.0
+helm install metaplug-0.1.0.tgz --name metaplug-demo
 ```
 
 **Or... Even Better, with Helm and Onchain Archives**
