@@ -21,6 +21,7 @@ spec:
       containers: 
       - name: bitwork
         image: gwolf3/bitwork:0.0.3
+        imagePullPolicy: Always
         env:
         - name: BITCOM
           value: '19HxigV4QyBv3tHpQVcUEQyq1pzZVdoAut'
