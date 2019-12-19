@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bitwork
+  namespace: metaplug
+spec:
+  selector:
+    matchLabels:
+      app: bitwork
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bitwork
+    spec:
+      volumes:
+      - name: bitmount
+        hostPath:
+          path: /mnt
+          type: Directory
+      containers: 
+      - name: bitwork
+        image: gwolf3/bitwork:0.0.3
+        env:
+        - name: BITCOM
+          value: '19HxigV4QyBv3tHpQVcUEQyq1pzZVdoAut'
+        volumeMounts:
+        - name: bitmount 
+          mountPath: /mnt

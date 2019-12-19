@@ -1,0 +1,15 @@
+
+
+# this is where you can specify the bitcom protocol to follow, if any.
+# a couple samples to try:
+# weatherSV: 1LtyME6b5AnMopQrBPLk4FGN8UBuhxKqrn
+# B: 19HxigV4QyBv3tHpQVcUEQyq1pzZVdoAut
+
+bitwork:
+  bitcom: '19HxigV4QyBv3tHpQVcUEQyq1pzZVdoAut'
+
+# here you should just specify the image that contains logic to run application, 
+# you can also specify port to run here, by defauly it will be set to 8080
+metaplug:
+  image: 'python:alpine'
+  port: 8080
