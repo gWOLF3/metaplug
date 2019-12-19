@@ -1,6 +1,6 @@
 # metaplug
 
-<img src="./plug.png" alt="plug" width="200"/>
+<img src="./assets/plug.png" alt="plug" width="200"/>
 
 #### a pluggable application framework for the metanet
 
@@ -19,7 +19,9 @@ Bitplug relies on [Bitwork](https://www.bitwork.network/#/) to listen and proces
 
 ### Try a demo:
 
-The demo application included allows a user to explore bitcom-based transactions ('B' protocol by default) in a web terminal. 
+The demo application included allows a user to explore bitcom-based transactions ('B' protocol by default) in a web terminal. Keep in mind, this application is only to demonstrate how the framework can be used.
+
+<img src="./assets/metaplugv1.gif" alt="bitbox.gif" style="width:400px"/>
 
 You'll need a  Kubernetes environment (I'm using minikube running locally for demo)
 
@@ -33,12 +35,18 @@ kubectl apply -f metaplug.yaml
 kubectl get pods --namespace metaplug
 minikube service metaplug-http --namespace metaplug
 ```
+Can also be done with:
+```
+helm install metaplug --name metaplug-demo
+```
 
 **Or... Even Better, with Helm and Onchain Archives**
 
 Once [this](https://github.com/helm/monocular/pull/643) PR is merged to fix [this](https://github.com/helm/helm/issues/2916) issue with Tiller. We will be able to run commands like this to start a bitcoin app:
 
-`helm install https://bico.media/d0b9e83544d1048c891069be47592279facec70b29bfa45826de1286646429d9 --name metaplug-demo` 
+```
+helm install https://bico.media/d0b9e83544d1048c891069be47592279facec70b29bfa45826de1286646429d9 --name metaplug-demo
+``` 
 
 where, `d0b9e83544d1048c891069be47592279facec70b29bfa45826de1286646429d9` is a gzip helm archive, produced by `helm package` command.
 
